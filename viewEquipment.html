@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html xmlns:th="http://thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Pooly Pools</title>
+<style>
+	body{
+		justify-content:center;
+		align-items:center;
+		backgroud:lightgreen; 
+		font-size:1.8em;
+	}
+</style>
+</head>
+<body>
+	<h1>Equipments</h1>
+ 
+	<table border="1">
+		<tr>
+			<th>ID</th>
+			<th>name</th>
+			<th>price</th>
+			<th>quantity</th>
+			<th>Actions</th>
+		</tr>
+		
+		<tr th:each="equ : ${equs}">
+			<td th:text="${equ.ID}"></td>
+			<td th:text="${equ.name}"></td>
+			<td th:text="${equ.price}"></td>
+			<td th:text="${equ.quantity}"></td>
+			<td>
+				<a href="" th:href="@{/edit/{ID}(ID=${equ.ID})}">EDIT</a>
+				<a href="" th:href="@{/delete/{ID}(ID=${equ.ID})}">DELETE</a>
+			</td>
+		</tr>
+	</table>
+	
+	<a th:href="@{/}">Go to home Page</a>
+</body>
+</html>

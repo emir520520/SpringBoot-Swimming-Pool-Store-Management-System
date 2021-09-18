@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>PurchasedInvoice</title>
+</head>
+<body>
+	
+	<table border="1">
+		<tr>
+			<th>Name</th>
+			<th>Price</th>
+		</tr>
+		
+		<tr th:each="purchasedToy : ${purchasedToys}">
+			<td th:text="${purchasedToy.name}"></td>
+			<td th:text="${purchasedToy.price}"></td>
+		</tr>
+	</table>
+	
+	<p>The total price is: <span th:text="${total}"></span></p>
+	<br><br><br><br><br><br>
+	<a th:href="@{/}">Go to home page</a>
+</body>
+</html>

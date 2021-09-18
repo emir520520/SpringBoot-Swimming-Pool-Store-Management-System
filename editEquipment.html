@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html xmlns:th="http://thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Pooly Pools</title>
+</head>
+<body>
+	<h1>Edit Equipment</h1> 
+	
+	<form action="#" th:action="@{/edit}" th:object="${equ}">
+		<input type="hidden" th:field="*{ID}"/><br>
+		Name:<input type="text" th:field="*{name}"/><br>
+		Price:<input type="text" th:field="*{price}"/><br>
+		Quantity:<input type="text" th:field="*{quantity}"/><br>
+		
+		<br><br><br>
+		<input type="submit" value="Edit Equipment"/>
+	</form>
+	
+	<a th:href="@{/}">Go to home page</a>
+</body>
+</html>

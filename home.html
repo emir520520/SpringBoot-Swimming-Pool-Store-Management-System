@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Home</title>
+</head>
+<body>
+
+	<div sec:authorize="isAuthenticated()">
+		UserName:<span sec:authentication="name">NOT FOUND</span>
+		<br>
+		Roles:<span sec:authentication="principal.authorities">NOT FOUND</span>
+		<br><br>
+		
+		<form action="#" th:action="@{/logout}" method="post">
+			<input type="submit" value="logout">
+		</form>
+	</div>
+	
+	<a th:href="@{/GoAddEquipment}">Add Equipment</a>
+	<br><br>
+	<a th:href="@{/ViewEquipments}">View Equipments</a>
+	<br><br>
+	<a th:href="@{/goSearch}">Search Equipments</a>
+	<br><br>
+	<a th:href="@{/register}">New User Registration</a>
+	<br><br>
+	<a th:href="@{/goSendEmail}">Send Equipments Information</a>
+</body>
+</html>

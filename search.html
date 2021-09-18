@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	
+	<h2>Search By Equipment Name</h2>
+	<form action="/SearchByName">
+		Name:<input type="text" name="name"/><br>
+		<input type="submit" value="search">
+	</form>
+	
+	<h2>Search By Equipment Price Range</h2>
+	<form action="/SearchByPrice">
+		Min Price:<input type="number" name="minPrice"/><br>
+		Max Price:<input type="number" name="maxPrice"/><br>
+		<input type="submit" value="search">
+	</form>
+	
+	<h2>Search By Equipment Quantity Range</h2>
+	<form action="/SearchByQuantity">
+		Min Quantity:<input type="number" name="minQuantity"/><br>
+		Max Quantity:<input type="number" name="maxQuantity"/><br>
+		<input type="submit" value="search">
+	</form>
+	
+	<a href="/">Go to home Page</a>
+</body>
+</html>

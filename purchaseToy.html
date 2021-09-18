@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html  xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Purchase Toy</title>
+</head>
+<body>
+	<form action="#" th:action="@{/PurchaseToy}">
+		<table border="1">
+			<tr>
+				<th>ID</th>
+				<th>name</th>
+				<th>price</th>
+				<th>quantity</th>
+				<th>store</th>
+				<th>Purchase</th>
+			</tr>
+		
+			<tr th:each="toy : ${toys}">
+				<td th:text="${toy.ID}"></td>
+				<td th:text="${toy.toyName}"></td>
+				<td th:text="${toy.price}"></td>
+				<td th:text="${toy.quantity}"></td>
+				<td th:text="${toy.toyStore}"></td>
+				<td>
+					<input name="checked" type="checkbox" th:value="${toy.ID}">
+				</td>
+			</tr>
+		</table>
+		
+		<input type="submit" value="Purchase">
+	</form>
+</body>
+</html>
